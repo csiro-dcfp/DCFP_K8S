@@ -14,7 +14,7 @@ Set up an AWS account and obtain the appropriate AWS credentials.
  
 
 ```
-cd ./ACCESS_K8S/deployment
+cd ./DCFP_K8S/deployment
 
 ```
 Change the variables for DEPLOYMENT_NAME, REGION, PEM_KEY, MIN_SIZE, MAX_SIZE and DESIRED_CAPACITY as necessaryy
