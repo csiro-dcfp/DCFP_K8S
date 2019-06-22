@@ -1,5 +1,5 @@
-# ACCESS_K8S
-Configs and scripts for building kubernetes clusters managed by the Pangeo NASA ACCESS Project. Much of building the cluster uses [eksctl](https://github.com/weaveworks/eksctl) following the steps outlined here:[https://eksworkshop.com/] (https://eksworkshop.com/)
+# DCFP_K8S
+Configs and scripts for building kubernetes clusters managed by the Pangeo CSIRO DCFP Project. Much of building the cluster uses [eksctl](https://github.com/weaveworks/eksctl) following the steps outlined here:[https://eksworkshop.com/] (https://eksworkshop.com/)
 
 Steps to building your own cluster on AWS using our config. scripts
 
