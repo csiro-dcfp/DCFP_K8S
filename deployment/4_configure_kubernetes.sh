@@ -2,9 +2,9 @@
 
 # these commands are taken from zero2jupyterhub docs
 REGION=$(aws configure get region)
-EFSID=$(aws efs create-file-system --creation-token newefs --tags "Key=Name,Value=$CLUSTER_NAME" | jq -r ".FileSystemId")
+EFSID=$(aws efs describe-file-systems --creation-token newefs | jq -r ".FileSystems[].FileSystemId")
 
-set -e
+set -ex
 
 kubectl create clusterrolebinding cluster-admin-binding --clusterrole=cluster-admin
 kubectl create serviceaccount tiller --namespace=kube-system

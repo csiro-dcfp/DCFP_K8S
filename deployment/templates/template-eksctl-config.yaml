@@ -1,4 +1,4 @@
-apiVersion: eksctl.io/v1alpha4
+apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
@@ -13,8 +13,8 @@ nodeGroups:
     desiredCapacity: 1
     volumeSize: 100
     volumeType: gp2
-    allowSSH: true
-    sshPublicKeyPath: CHANGE_PUBLICKEY
+    ssh:
+        publicKeyPath: CHANGE_PUBLICKEY
     ami: auto
     amiFamily: AmazonLinux2
   - name: user-notebook
@@ -24,8 +24,8 @@ nodeGroups:
     desiredCapacity: 0
     volumeSize: 100
     volumeType: gp2
-    allowSSH: true
-    sshPublicKeyPath: CHANGE_PUBLICKEY
+    ssh:
+        publicKeyPath: CHANGE_PUBLICKEY
     ami: auto
     amiFamily: AmazonLinux2
     iam:
@@ -39,8 +39,8 @@ nodeGroups:
     volumeSize: 100
     volumeType: gp2
     desiredCapacity: 0
-    allowSSH: true
-    sshPublicKeyPath: CHANGE_PUBLICKEY
+    ssh:
+        publicKeyPath: CHANGE_PUBLICKEY
     ami: auto
     amiFamily: AmazonLinux2
     iam:
