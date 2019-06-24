@@ -11,15 +11,16 @@
 #sed -e "s/CHANGE_ACCOUNT_NUMBER/$ACCOUNT/g" ./templates/template-eksctl-permissions.json > eksctl-permissions.json
 #aws iam create-policy --policy-name eksctl-permissions --policy-document file://eksctl-permissions.json
 #aws iam attach-user-policy --policy-arn arn:aws:iam::$ACCOUNT:policy/eksctl-permissions --user-name circle-ci-deploy
-
+#
 
 #2) CUSTOMIZE configuration and permissions
-#KEY=CHANGE
-#SECRET_KEY=CHANGE
-#aws configure set aws_access_key_id ${KEY}
-#aws configure set aws_secret_access_key ${SECRET_KEY}
+#unset AWS_DEFAULT_PROFILE
+#KEY=CHANGE_ME
+#SECRET_KEY=CHANGE_ME
+#aws configure set aws_access_key_id ${KEY} --profile circleci
+#aws configure set aws_secret_access_key ${SECRET_KEY} --profile circleci
 
-REGION="us-east-1"
-export AWS_DEFAULT_PROFILE=circleci
-aws configure set region ${REGION}
-aws configure set output json
+#REGION="ap-southeast-2"
+#export AWS_DEFAULT_PROFILE=circleci
+#aws configure set region ${REGION}
+#aws configure set output json
