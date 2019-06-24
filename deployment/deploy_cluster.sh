@@ -2,9 +2,9 @@
 
 set -ex
 
-DEPLOYMENT_NAME="pangeo-nasa"
-REGION="us-west-2"
-PEM_KEY="amandatan-pangeo-testmachine"
+DEPLOYMENT_NAME="pangeo-csiro-dcfp"
+REGION="ap-southeast-2"
+PEM_KEY="pangeo-csiro-dcfp-eks.pem.pub"
 MIN_SIZE="2"
 MAX_SIZE="8"
 DESIRED_SIZE="3"
